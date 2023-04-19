@@ -11,7 +11,7 @@ public class Validador {
      * @return
      */
     public boolean somenteNumeros(String str) {
-        return str != null && str.trim().matches("[0-9]*");
+        return str != null && str.trim().matches("[0-9]* ");
     }
 
     /**

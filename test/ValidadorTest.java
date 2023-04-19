@@ -10,11 +10,14 @@ public class ValidadorTest {
     @Test
     public void testarSomenteNumeros(){
         Validador val = new Validador();
-        String str = " ";// deu erro;
-        //str = "l";
-        val.somenteNumeros(str);                
+        String str = " ";// deu erro, porque há apenas um espaço e considerou como número Para corrigir é necessário adicionar um espaço
+        //no regex;
+        String str2 = "0";
+        //val.somenteNumeros(str);              
+        //val.somenteNumeros(str2);
         try {
             assertEquals(true, val.somenteNumeros(str));
+            assertEquals(true, val.somenteNumeros(str2));
         } catch (ArithmeticException e) {
             System.out.println("O valor não é um número \n" + e.getMessage());
         }
