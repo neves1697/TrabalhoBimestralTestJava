@@ -1,5 +1,6 @@
 package validador;
 
+import com.sun.tools.javac.util.StringUtils;
 import java.util.InputMismatchException;
 
 public class Validador {
@@ -11,7 +12,18 @@ public class Validador {
      * @return
      */
     public boolean somenteNumeros(String str) {
-        return str != null && str.trim().matches("[0-9]* ");
+        /*boolean validaEspacos = false;
+        
+        try {
+            //str = str.replaceAll(" ", "");
+            
+            //return str != null && str.trim().matches("[0-9]*");
+            
+        } catch (ArithmeticException e) {
+            System.out.println(str + " não é um número " + e.getMessage());
+        }
+        */
+        return str != null && str.trim().matches("[0-9]*");
     }
 
     /**
