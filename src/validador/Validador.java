@@ -12,7 +12,6 @@ public class Validador {
      * @return
      */
     public boolean somenteNumeros(String str) {
-        boolean validaEspacos = false;
             str = str.replaceAll(" ", "");
             if(str.isEmpty() || str.isBlank()){
                 str = null;
