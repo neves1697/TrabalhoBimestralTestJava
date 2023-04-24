@@ -12,17 +12,11 @@ public class Validador {
      * @return
      */
     public boolean somenteNumeros(String str) {
-        /*boolean validaEspacos = false;
-        
-        try {
-            //str = str.replaceAll(" ", "");
-            
-            //return str != null && str.trim().matches("[0-9]*");
-            
-        } catch (ArithmeticException e) {
-            System.out.println(str + " não é um número " + e.getMessage());
-        }
-        */
+        boolean validaEspacos = false;
+            str = str.replaceAll(" ", "");
+            if(str.isEmpty() || str.isBlank()){
+                str = null;
+            }
         return str != null && str.trim().matches("[0-9]*");
     }
 
@@ -79,7 +73,7 @@ public class Validador {
         if (soma % 10 == 0) {
             return true; //Cartão válido!
         } else {
-            return true; //Cartão inválido!
+            return false; //Cartão inválido!
         }
     }
 
